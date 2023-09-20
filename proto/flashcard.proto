@@ -15,6 +15,7 @@ service FlashcardService {
 message CreateFlashcardRequest {
   string question = 1;
   string answer = 2;
+  string userId = 3;
 }
 
 message CreateFlashcardResponse {
