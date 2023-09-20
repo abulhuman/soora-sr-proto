@@ -5,7 +5,7 @@ package flashcard;
 service FlashcardService {
   rpc CreateFlashcard (CreateFlashcardRequest) returns (CreateFlashcardResponse) {}
   rpc FindOne (FindOneRequest) returns (FindOneResponse) {}
-  rpc FindAll (google.protobuf.Empty) returns (FindAllResponse) {}
+  rpc FindAll (FindAllArgsRequest) returns (FindAllResponse) {}
   rpc UpdateFlashcard (UpdateFlashcardRequest) returns (UpdateFlashcardResponse) {}
   rpc DeleteFlashcard (FindOneRequest) returns (UpdateFlashcardResponse) {}
 }
@@ -29,10 +29,24 @@ message FindOneData {
   string id = 1;
   string question = 2;
   string answer = 3;
+  string created_date = 4;
 }
 
 message FindOneRequest {
   string id = 1;
+}
+
+enum Order {
+  ASC = 0;
+  DESC = 1;
+}
+
+message OrderBy {
+  Order created_date = 1;
+} 
+
+message FindAllArgsRequest {
+  OrderBy orderBy = 1;
 }
 
 message FindOneResponse {
