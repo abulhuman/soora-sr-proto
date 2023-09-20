@@ -1,0 +1,13 @@
+{
+  "name": "soora-sr-proto",
+  "version": "1.0.0",
+  "description": "Protofiles for Soora Spaced Repetition Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Adem Mohammed <abulhuman.dev@gmail.com>",
+  "license": "ISC"
+}
+
