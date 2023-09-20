@@ -2,9 +2,8 @@
 
 This repository defines protofiles the following microservices:
 
-- <Task 1>
-- <Task 2>
-- <Task 3>
+- auth
+- flashcard
 
 Usage:
 
