@@ -47,7 +47,7 @@ message OrderBy {
 } 
 
 message FindAllArgsRequest {
-  OrderBy orderBy = 1;
+  optional OrderBy orderBy = 1;
 }
 
 message FindOneResponse {
