@@ -21,7 +21,12 @@ message CreateFlashcardRequest {
 message CreateFlashcardResponse {
   int32 status = 1;
   repeated string error = 2;
-  string id = 3;
+  CreateFlashcardData data = 3;
+}
+
+message CreateFlashcardData {
+  string id = 1;
+  string created_date = 4;
 }
 
 // CRUD#R

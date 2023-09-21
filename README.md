@@ -5,6 +5,10 @@ This repository defines protofiles the following microservices:
 - auth
 - flashcard
 
+## Microservice Flow
+
+![Microservice Flow](msvc-flow.png)
+
 Usage:
 
 ```json
