@@ -88,6 +88,10 @@ message UpdateFlashcardResponse {
 
 // Share Link
 
+message GetShareLinkRequest {
+  string userId = 1;
+}
+
 message GetShareLinkResponse {
   int32 status = 1;
   repeated string error = 2;
