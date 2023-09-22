@@ -8,7 +8,7 @@ service FlashcardService {
   rpc FindAll (FindAllArgsRequest) returns (FindAllResponse) {}
   rpc UpdateFlashcard (UpdateFlashcardRequest) returns (UpdateFlashcardResponse) {}
   rpc DeleteFlashcard (FindOneRequest) returns (UpdateFlashcardResponse) {}
-  rpc GetShareLink (FindAllArgsRequest) returns (GetShareLinkResponse) {}
+  rpc GetShareLink (GetShareLinkRequest) returns (GetShareLinkResponse) {}
   rpc ViewFromShareLink (ViewFromShareLinkRequest) returns (ViewFromShareLinkResponse) {}
 }
 
