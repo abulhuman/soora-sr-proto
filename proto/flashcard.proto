@@ -11,6 +11,7 @@ service FlashcardService {
   rpc GetShareLink (GetShareLinkRequest) returns (GetShareLinkResponse) {}
   rpc ViewFromShareLink (ViewFromShareLinkRequest) returns (ViewFromShareLinkResponse) {}
   rpc CreateAttribute (CreateAttributeRequest) returns (CreateAttributeResponse) {}
+  rpc ReviewFlashcard (UpdateFlashcardRequest) returns (UpdateFlashcardResponse) {}
 }
 
 // CRUD#C
@@ -42,6 +43,12 @@ message FindOneData {
   repeated AttributeData attributes = 5;
 }
 
+enum Status {
+  AGAIN = 0;
+  EASY = 1;
+  HARD = 2;
+}
+
 message FindOneRequest {
   string id = 1;
 }
@@ -57,6 +64,7 @@ message OrderBy {
 
 message GroupBy {
   optional AttributeData attribute = 1;
+  optional boolean isVisible = 2;
 }
 
 message FindAllArgsRequest {
@@ -84,8 +92,9 @@ message FindAllResponse {
 
 message UpdateFlashcardRequest {
   string id = 1;
-  string question = 2;
-  string answer = 3;
+  optional string question = 2;
+  optional string answer = 3;
+  optional Status reviewStatus = 4;
 }
 
 message UpdateFlashcardResponse {
