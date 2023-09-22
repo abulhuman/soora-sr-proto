@@ -131,7 +131,6 @@ message CreateAttributeRequest {
 message CreateAttributeResponse {
   int32 status = 1;
   repeated string error = 2;
-  AttributeData data = 3;
 }
 
 
