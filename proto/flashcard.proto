@@ -56,7 +56,7 @@ message OrderBy {
 }
 
 message GroupBy {
-  string attribute = 1;
+  optional AttributeData attribute = 1;
 }
 
 message FindAllArgsRequest {
