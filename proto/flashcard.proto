@@ -64,7 +64,7 @@ message OrderBy {
 
 message GroupBy {
   optional AttributeData attribute = 1;
-  optional boolean isVisible = 2;
+  optional bool isVisible = 2;
 }
 
 message FindAllArgsRequest {
