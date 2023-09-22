@@ -8,6 +8,8 @@ service FlashcardService {
   rpc FindAll (FindAllArgsRequest) returns (FindAllResponse) {}
   rpc UpdateFlashcard (UpdateFlashcardRequest) returns (UpdateFlashcardResponse) {}
   rpc DeleteFlashcard (FindOneRequest) returns (UpdateFlashcardResponse) {}
+  rpc GetShareLink (FindAllArgsRequest) returns (GetShareLinkResponse) {}
+  rpc ViewFromShareLink (ViewFromShareLinkRequest) returns (ViewFromShareLinkResponse) {}
 }
 
 // CRUD#C
@@ -82,5 +84,23 @@ message UpdateFlashcardRequest {
 message UpdateFlashcardResponse {
   int32 status = 1;
   repeated string error = 2;
+}
+
+// Share Link
+
+message GetShareLinkResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string link = 3;
+}
+
+message ViewFromShareLinkRequest {
+  string token = 1;
+}
+
+message ViewFromShareLinkResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  FindAllData data = 3;
 }
 
