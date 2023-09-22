@@ -39,8 +39,9 @@ message FindOneData {
   string id = 1;
   string question = 2;
   string answer = 3;
-  string created_date = 4;
-  repeated AttributeData attributes = 5;
+  string createdDate = 4;
+  string reviewDate = 5;
+  repeated AttributeData attributes = 6;
 }
 
 enum Status {
@@ -59,7 +60,7 @@ enum Order {
 }
 
 message OrderBy {
-  Order created_date = 1;
+  Order createdDate = 1;
 }
 
 message GroupBy {
