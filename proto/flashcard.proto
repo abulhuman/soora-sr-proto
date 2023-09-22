@@ -40,7 +40,7 @@ message FindOneData {
   string question = 2;
   string answer = 3;
   string createdDate = 4;
-  string reviewDate = 5;
+  string nextReviewDate = 5;
   repeated AttributeData attributes = 6;
 }
 
